@@ -2,11 +2,15 @@ function! s:Vword()
   return getline('.')[col("'<")-1:col("'>")-1]
 endfunction
 
-function! highlight_word#highlight_word(word)
+function! highlight_word#highlight_clear()
   if exists('s:highlight_match_id')
     call matchdelete(s:highlight_match_id)
     unlet s:highlight_match_id
   endif
+endfunction
+
+function! highlight_word#highlight_word(word)
+  call highlight_word#highlight_clear()
   if exists('s:highlight_word') && s:highlight_word ==# a:word
     unlet s:highlight_word
   else

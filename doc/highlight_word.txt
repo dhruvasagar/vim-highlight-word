@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------
 
                       Highlight Word usages under cursor
-                                 Version 0.1.0
+                                 Version 0.1.1
 
                  Author: Dhruva Sagar (http://dhruvasagar.com)
                License: MIT (http://opensource.org/licenses/MIT)
@@ -39,14 +39,18 @@ USAGE                                                     *highlight-word-usage*
 --------------------------------------------------------------------------------
 MAPPINGS                                               *highlight-word-mappings*
 
-                                                        *highlight-nword-toggle*
+                                                    *highlight-nword-toggle-map*
 <Plug>(highlight-nword)
       Toggle highlight for word under cursor. Mapped to `<Enter>` by default.
 
-                                                        *highlight-vword-toggle*
+                                                    *highlight-vword-toggle-map*
 <Plug>(highlight-vword)
       Toggle highlight for visual selection under cursor. Mapped to `<Enter>` by
       default.
+
+                                                      *highlight-word-clear-map*
+<Plug>(highlight-clear)
+      Clear currently highlighted word. Mapped to `<Esc>` by default.
 
 --------------------------------------------------------------------------------
 CONTRIBUTING                                       *highlight-word-contributing*
@@ -58,3 +62,4 @@ CONTRIBUTING                                       *highlight-word-contributing*
       gmail [dot] com
 
       Report issues at https://github.com/dhruavsagar/vim-highlight-word/issues
+
