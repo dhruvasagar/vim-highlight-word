@@ -1,0 +1,60 @@
+*highlight-word.txt*                                            *highlight-word*
+--------------------------------------------------------------------------------
+
+                      Highlight Word usages under cursor
+                                 Version 0.1.0
+
+                 Author: Dhruva Sagar (http://dhruvasagar.com)
+               License: MIT (http://opensource.org/licenses/MIT)
+
+--------------------------------------------------------------------------------
+CONTENTS                                              *highlight-words-contents*
+
+    1. Installation ...................... |highlight-word-installation|
+    2. Usage ............................. |highlight-word-usage|
+    4. Mappings .......................... |highlight-word-mappings|
+    5. Contributing ...................... |highlight-words-contributing|
+
+--------------------------------------------------------------------------------
+INSTALLATION                                      *highlight-words-installation*
+
+      There are several ways to install this plugin based on the plugin
+      manager you use.
+
+      1. Pathogen: Clone repository in your bundle directory and restart vim. >
+           $ git clone \
+              git@github.com:dhruvasagar/vim-highlight-word.git ~/.vim/bundle
+<
+      2. Vundle: Add this to your vimrc - `Plugin dhruvasagar/vim-highlight-word`
+
+      3. NeoBundle: Add this to your vimrc - `NeoBundle dhruvasagar/vim-highlight-word`
+
+--------------------------------------------------------------------------------
+USAGE                                                     *highlight-word-usage*
+
+      Use the mapping |highlight-nword-toggle| in normal mode or
+      |highlight-vword-toggle| in visual mode to toggle the highlighting of the
+      word under cursor / visual selection.
+
+--------------------------------------------------------------------------------
+MAPPINGS                                               *highlight-word-mappings*
+
+                                                        *highlight-nword-toggle*
+<Plug>(highlight-nword)
+      Toggle highlight for word under cursor. Mapped to `<Enter>` by default.
+
+                                                        *highlight-vword-toggle*
+<Plug>(highlight-vword)
+      Toggle highlight for visual selection under cursor. Mapped to `<Enter>` by
+      default.
+
+--------------------------------------------------------------------------------
+CONTRIBUTING                                       *highlight-word-contributing*
+
+      You can find the code at
+      https://github.com/dhruvasagar/vim-highlight-word, fork it and send me
+      a PR with a good commit message and i'll review it and merge if it looks
+      good. You can also reach me directly via e-mail at dhruva [dot] sagar [at]
+      gmail [dot] com
+
+      Report issues at https://github.com/dhruavsagar/vim-highlight-word/issues
