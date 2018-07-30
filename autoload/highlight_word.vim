@@ -1,4 +1,4 @@
-function! highlight_word#Vword()
+function! s:Vword()
   return getline('.')[col("'<")-1:col("'>")-1]
 endfunction
 
@@ -16,11 +16,11 @@ function! highlight_word#highlight_word(word)
 endfunction
 
 function! highlight_word#highlight_nword()
-  call s:highlight_word(expand('<cword>'))
+  call highlight_word#highlight_word(expand('<cword>'))
 endfunction
 
 function! highlight_word#highlight_vword()
   let col = col('.')
-  call s:highlight_word(s:Vword())
+  call highlight_word#highlight_word(s:Vword())
   call cursor(line('.'), col)
 endfunction
