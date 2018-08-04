@@ -6,11 +6,15 @@ function! highlight_word#highlight_clear()
   if exists('s:highlight_match_id')
     call matchdelete(s:highlight_match_id)
     unlet s:highlight_match_id
+    unlet s:highlight_word
   endif
 endfunction
 
 function! highlight_word#highlight_word(word)
-  call highlight_word#highlight_clear()
+  if exists('s:highlight_match_id')
+    call matchdelete(s:highlight_match_id)
+    unlet s:highlight_match_id
+  endif
   if exists('s:highlight_word') && s:highlight_word ==# a:word
     unlet s:highlight_word
   else

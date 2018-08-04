@@ -16,5 +16,17 @@ if !hasmapto('<Plug>(highlight-vword)')
   xmap <Enter> <Plug>(highlight-vword)
 endif
 if !hasmapto('<Plug>(highlight-clear)')
-  nmap <ESC> <Plug>(highlight-clear)
+  nmap <Leader><Enter> <Plug>(highlight-clear)
+endif
+
+if !exists('g:highlight_cursor')
+  let g:highlight_cursor = 0
+endif
+
+if exists('g:highlight_cursor') && g:highlight_cursor
+  augroup highlight
+    au!
+
+    autocmd CursorMoved * call highlight_word#highlight_nword()
+  augroup END
 endif
